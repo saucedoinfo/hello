@@ -1,9 +1,3 @@
-///
-/// Hyperspace by HTML5 UP
-/// html5up.net | @ajlkn
-/// Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-///
-
 /* Wrapper */
 
 	.wrapper {
@@ -25,6 +19,11 @@
 			@include breakpoint('<=small') {
 				@include padding(3em, 2em);
 			}
+		}
+
+		&.dedicarte {
+			background: rgb(213,154,172);
+			background: linear-gradient(45deg, rgba(213,154,172,1) 0%, rgba(169,90,112,1) 100%);
 		}
 
 		&.alt {
