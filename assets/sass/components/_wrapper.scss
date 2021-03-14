@@ -21,9 +21,14 @@
 			}
 		}
 
+		&.ctastes {
+			background: rgb(66,65,93);
+			background: linear-gradient(120deg, rgba(66,65,93,1) 0%, rgba(47,46,80,1) 100%);
+		}
+
 		&.dedicarte {
 			background: rgb(213,154,172);
-			background: linear-gradient(45deg, rgba(213,154,172,1) 0%, rgba(169,90,112,1) 100%);
+			background: linear-gradient(120deg, rgba(213,154,172,1) 0%, rgba(169,90,112,1) 100%);
 		}
 
 		&.alt {
