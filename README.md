@@ -1,10 +1,11 @@
-# 👋 ¡Hola mundo!
+# 👋¡Hola!
 
-## Mi nombre es **Fernando S. Saucedo**
+## Soy Fernando Saucedo
 
-Sitio personal | Presentación y redes sociales.
+Maquetador Web. Perseverante estudiante. Futuro Frontend Developer.🚀 <br>
+								Aquí veras mis avances en desarrollo.
 
-![hi](./images/hi.png "Hi-web-site")
+![hi](./src/images/site.png "Hi-web-site")
 
 ---
 
