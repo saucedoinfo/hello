@@ -10,7 +10,7 @@
     "type": "git",
     "url": "git+https://github.com/saucedoinfo/hello.git"
   },
-  "author": "",
+  "author": "Fernando Saucedo",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/saucedoinfo/hello/issues"
