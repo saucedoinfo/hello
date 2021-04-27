@@ -35,6 +35,7 @@ import { init as server, stream, reload } from "browser-sync";
 //Plumber
 import plumber from "gulp-plumber";
 
+
 // //Typescript
 // import ts from "gulp-typescript";
 
@@ -56,15 +57,15 @@ gulp.task("html-min", () => {
 		.pipe(gulp.dest("./public"));
 });
 
-// gulp.task("styles", () => {
-// 	return gulp
-// 		.src("./src/css/*.css")
-// 		.pipe(plumber())
-// 		.pipe(concat("styles-min.css"))
-// 		.pipe(postcss(cssPlugins))
-// 		.pipe(gulp.dest("./public/css"))
-// 		.pipe(stream());
-// });
+gulp.task("styles", () => {
+	return gulp
+		.src("./src/css/*.css")
+		.pipe(plumber())
+		.pipe(concat("styles-min.css"))
+		.pipe(postcss(cssPlugins))
+		.pipe(gulp.dest("./public/assets/css"))
+		.pipe(stream());
+});
 
 gulp.task("babel", () => {
 	return gulp
@@ -73,7 +74,7 @@ gulp.task("babel", () => {
 		.pipe(concat("scripts-min.js"))
 		.pipe(babel())
 		.pipe(terser())
-		.pipe(gulp.dest("./public/js"));
+		.pipe(gulp.dest("./public/assets/js"));
 });
 
 gulp.task("views", () => {
@@ -95,29 +96,29 @@ gulp.task("views", () => {
 
 gulp.task("sass", () => {
 	return gulp
-		.src("./src/scss/*.scss")
+		.src("./src/sass/*.scss")
 		.pipe(plumber())
 		.pipe(
 			sass({
 				outputStyle: "compressed",
 			})
 		)
-		.pipe(concat("styles.css"))
+		.pipe(concat("styles-min.css"))
 		.pipe(postcss(cssPlugins))
-		.pipe(gulp.dest("./public/css"))
+		.pipe(gulp.dest("./public/assets/css"))
 		.pipe(stream());
 });
 
 gulp.task("clean", () => {
 	return gulp
-		.src("./public/css/styles.css")
+		.src("./public/assets/css/styles-min.css")
 		.pipe(plumber())
 		.pipe(
 			clean({
 				content: ["./public/*.html"],
 			})
 		)
-		.pipe(gulp.dest("./public/css"));
+		.pipe(gulp.dest("./public/assets/css"));
 });
 
 gulp.task("imgmin", () => {
@@ -136,7 +137,7 @@ gulp.task("imgmin", () => {
 				],
 			})
 		)
-		.pipe(gulp.dest("./public/images"));
+		.pipe(gulp.dest("./public/assets/images"));
 });
 
 gulp.task("typescript", () => {
@@ -151,14 +152,16 @@ gulp.task("typescript", () => {
 		.pipe(gulp.dest("public/js"));
 });
 
+
+
 gulp.task("default", () => {
 	server({
 		server: "./public",
 	});
-	gulp.watch('./src/*.html', gulp.series('html-min')).on('change', reload)
-	// gulp.watch('./src/css/*.css', gulp.series('styles'))
+	gulp.watch("./src/*.html", gulp.series("html-min")).on("change", reload);
+	gulp.watch('./src/css/*.css', gulp.series("styles")).on('change', reload);
 	// gulp.watch("./src/views/**/*.pug", gulp.series("views")).on("change", reload);
-	gulp.watch("./src/scss/**/*.scss", gulp.series("sass"));
-	//   gulp.watch('./src/js/*.js', gulp.series('babel')).on('change', reload);
-	gulp.watch("./src/ts/*.ts", gulp.series("typescript")).on("change", reload);
+	gulp.watch("./src/sass/*.scss", gulp.series("sass"));
+	gulp.watch("./src/js/*.js", gulp.series("babel")).on("change", reload);
+	// gulp.watch("./src/ts/*.ts", gulp.series("typescript")).on("change", reload);
 });
