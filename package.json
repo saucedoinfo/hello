@@ -36,6 +36,8 @@
     "gulp-terser": "^2.0.1"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.15.3",
+    "bootstrap": "^5.0.0-beta3",
     "gulp-htmlmin": "^5.0.1"
   }
 }

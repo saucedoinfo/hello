@@ -1,9 +1,8 @@
-# 👋¡Hola!
+## 👋 Hi!
 
-## Soy Fernando Saucedo
+# I'm Fernando Saucedo
 
-Maquetador Web. Perseverante estudiante. Futuro Frontend Developer.🚀 <br>
-								Aquí veras mis avances en desarrollo.
+Maquetador Web. Perseverante estudiante. Futuro Frontend Developer.🚀 
 
 ![hi](./src/images/site.png "Hi-web-site")
 
