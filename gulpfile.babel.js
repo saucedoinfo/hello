@@ -123,7 +123,7 @@ gulp.task("clean", () => {
 
 gulp.task("imgmin", () => {
 	return gulp
-		.src("./src/images/*")
+		.src("./src/images/**/*")
 		.pipe(plumber())
 		.pipe(
 			imagemin({
