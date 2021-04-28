@@ -6,21 +6,10 @@ Theme URL - https://angrystudio.com/themes/koka-free-bootstrap-5-website-templat
 Designer Name - Angry Studio
 Designer Website - https://angrystudio.com
 */
-/* color */
-
-.bg-hero-gradiente {
-	background: rgb(248,249,250);
-background: -moz-radial-gradient(circle, rgba(248,249,250,1) 0%, rgba(199,194,209,1) 100%);
-background: -webkit-radial-gradient(circle, rgba(248,249,250,1) 0%, rgba(199,194,209,1) 100%);
-background: radial-gradient(circle, rgba(248,249,250,1) 0%, rgba(199,194,209,1) 100%);
-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#f8f9fa",endColorstr="#c7c2d1",GradientType=1);
-}
-
-
 /*-- General Styles--*/
 body {
 	color: #3d4852;
-	font-family: 'Lato', sans-serif;
+	font-family: 'Montserrat', sans-serif;
 	font-weight: 500;
 	line-height: 1.8rem;
 }
@@ -39,13 +28,11 @@ body {
 	border-radius: 10px;
 }
 h1,h2,h3,h4,h5,h6 {
-	font-family: 'Lato', sans-serif;
+	font-family: 'Nunito', sans-serif;
 }
-.font-lato {
-	font-family: 'Lato', sans-serif;
+.font-nunito {
+	font-family: 'Nunito', sans-serif;
 }
-
-font-family: 'Lato', sans-serif;
 .text-muted {
 	color: #8e98a2 !important;
 }
@@ -188,15 +175,15 @@ font-family: 'Lato', sans-serif;
 
 /*-- Hero Section --*/
 .hero {
-	/* margin-top: 130px; */
+	margin-top: 130px;
 }
 .hero-title {
 	font-weight: 900;
 	line-height: 1
 }
 .hero-image img {
-	/* transform: rotate(-1.5deg); */
-	transition: transform .5s;
+	transform: rotate(-1.5deg);
+	transition: transform .3s;
 	z-index: 3;
 }
 .hero-image img:hover {
@@ -205,11 +192,11 @@ font-family: 'Lato', sans-serif;
 
 /*-- Portfolio --*/
 .portfolio {
-	margin-top: 80px;
+	margin-top: 120px;
 }
 .portfolio-item-img {
 	object-fit: cover;
-	height: 400px;
+	height: 300px;
 }
 .portfolio-item-content {
 	background: rgb(36 43 49 / 80%);
