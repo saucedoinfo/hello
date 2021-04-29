@@ -218,7 +218,7 @@ font-family: 'Lato', sans-serif;
 	right: 20px;
 	bottom: 20px;
 	left: 20px;
-	cursor: pointer
+	/* cursor: pointer */
 }
 .portfolio-item:hover .portfolio-item-content {
 	visibility: visible;
