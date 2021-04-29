@@ -205,11 +205,11 @@ font-family: 'Lato', sans-serif;
 
 /*-- Portfolio --*/
 .portfolio {
-	margin-top: 80px;
+	margin-top: 50px;
 }
 .portfolio-item-img {
 	object-fit: cover;
-	height: 400px;
+	height: 300px;
 }
 .portfolio-item-content {
 	background: rgb(36 43 49 / 80%);
