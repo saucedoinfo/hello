@@ -17,7 +17,7 @@
 		/>
 		<link href="assets/css/styles-min.css" rel="stylesheet" />
 	</head>
-	<body data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-offset="500px" tabindex="0">
+	<body data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-offset="0px" tabindex="0">
 		<nav
 			id="primary-navbar"
 			class="primary-nav navbar navbar-expand-lg navbar-light bg-white fixed-top font-lato"
@@ -27,11 +27,11 @@
 				<div class="collapse navbar-collapse" id="navbarNavDropdown">
 					<ul class="navbar-nav ms-auto">
 						<li class="nav-item">
-							<a class="nav-link active" aria-current="page" href="#">Home</a>
+							<a class="nav-link active" aria-current="page" href="#hero">Home</a>
 						</li>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="#">Work</a>
+							<a class="nav-link" href="#work">Work</a>
 						</li>
 						<li class="nav-item dropdown">
 							<a
@@ -48,12 +48,12 @@
 								class="dropdown-menu"
 								aria-labelledby="navbarDropdownMenuLink"
 							>
-								<li><a class="dropdown-item" href="#">Design</a></li>
-								<li><a class="dropdown-item" href="#">Development</a></li>
+								<li><a class="dropdown-item" href="#design">Design</a></li>
+								<li><a class="dropdown-item" href="#development">Development</a></li>
 							</ul>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="#">Contact</a>
+							<a class="nav-link" href="#contact">Contact</a>
 						</li>
 					</ul>
 				</div>
@@ -98,12 +98,12 @@
 				<div class="sidenav-menu mt-5">
 					<ul class="nav flex-column">
 						<li class="nav-item">
-							<a class="nav-link px-0 active" aria-current="page" href="#"
+							<a class="nav-link px-0 active" aria-current="page" href="#hero"
 								>Home</a
 							>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link px-0" href="#">Work</a>
+							<a class="nav-link px-0" href="#work">Work</a>
 						</li>
 						<li class="nav-item dropdown">
 							<a
@@ -115,12 +115,12 @@
 								>Services</a
 							>
 							<ul class="dropdown-menu border-0">
-								<li><a class="dropdown-item" href="#">Design</a></li>
-								<li><a class="dropdown-item" href="#">Developer</a></li>
+								<li><a class="dropdown-item" href="#design">Design</a></li>
+								<li><a class="dropdown-item" href="#development">Developer</a></li>
 							</ul>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link px-0" href="#">Contact</a>
+							<a class="nav-link px-0" href="#contact">Contact</a>
 						</li>
 					</ul>
 				</div>
@@ -168,7 +168,7 @@
 		</div>
 		<!-- Off Canvas Menu End-->
 		<!-- Hero Section Start-->
-		<section class="hero bg-light vh-100 d-flex align-items-center">
+		<section id="hero" class="hero bg-light vh-100 d-flex align-items-center">
 			<div class="container ">
 				<div class="row ">
 					<div
@@ -222,7 +222,7 @@
 								></a>
 							</ul>
 							<div>
-								<a href="#portfolio" class="btn btn-warning shadow-sm fw-bold me-2">Portfolio</a>
+								<a href="#work" class="btn btn-warning shadow-sm fw-bold me-2">Portfolio</a>
 								<a href="#" class="btn btn-outline-dark  fw-bold ms-2 ">Say hi!</a> 
 							</div>
 						</div>
@@ -240,7 +240,7 @@
 		</section>
 		<!-- Hero Section End-->
 		<!-- Portfolio Section Start-->
-		<section id="portfolio" class="portfolio bg-white vh-auto">
+		<section id="work" class="portfolio bg-white vh-auto">
 			<div class="container-fluid">
 				<div class="row">
 					<div class="col">
@@ -261,10 +261,6 @@
 					<!-- Portfolio Item Start-->
 					<div class="col-12 col-sm-6 col-md-6 col-lg-4 px-0">
 						<div class="portfolio-item position-relative overflow-hidden">
-							<!-- <a
-								href="https://saucedoinfo.github.io/curso_de_bootstrap_2018_platzi/assets/pages/proyecto_final.html"
-								target="_blank"
-							> -->
 								<img
 									class="portfolio-item-img img-fluid w-100"
 									src="assets/images/portfolio/portfolio-platzi.jpg"
@@ -286,7 +282,6 @@
 										<a href="https://saucedoinfo.github.io/curso_de_bootstrap_2018_platzi/assets/pages/proyecto_final.html" class="btn btn-outline-warning  fw-bold" target="_blank">Link</a>
 									</div>
 								</div>
-							<!-- </a> -->
 						</div>
 					</div>
 					<!-- Portfolio Item End-->
@@ -370,7 +365,7 @@
 					</div>
 				</div>
 				<div class="row">
-					<div class="col-12 col-md-6 col-lg-6">
+					<div id="design" class="col-12 col-md-6 col-lg-6">
 						<div class="service-box text-center mt-5">
 							<i class="fas fa-layer-group fa-4x text-dark"></i>
 							<h3 class="service-box-title text-dark mt-4 text-uppercase">
@@ -381,7 +376,7 @@
 							</p>
 						</div>
 					</div>
-					<div class="col-12 col-md-6 col-lg-6">
+					<div id="development" class="col-12 col-md-6 col-lg-6">
 						<div class="service-box text-center mt-5">
 							<i class="fas fa-laptop-code fa-4x text-dark"></i>
 							<h3 class="service-box-title text-dark mt-4 text-uppercase">
@@ -396,7 +391,7 @@
 			</div>
 		</section>
 		<!-- Services End-->
-		<section class="section bg-dark pb-5">
+		<section id="contact" class="section bg-dark pb-5">
 			<div class="container">
 				<div class="row">
 					<div class="col-12 col-md-7">
@@ -454,8 +449,19 @@
 				</div>
 			</div>
 		</section>
+		<!-- up -->
+		<section class="bg-dark">
+			<div class="container">
+				<div class="row">
+					<ul class="fa-2x my-4 text-light ps-0 text-decoration-none mt-4 text-center">
+						<a href="#hero" class="text-decoration-none"><i class="fas fa-arrow-circle-up "></i></a>
+					</ul>
+				</div>
+			</div>
+		</section>
+		<!-- /up -->
 		<!--Footer Start-->
-		<footer class="footer bg-dark text-muted pt-0 pt-lg-5">
+		<footer class="footer bg-dark text-muted ">
 			<div class="container">
 				<div class="row footer-credits text-center py-3">
 					<div class="col-12 col-md-12">
