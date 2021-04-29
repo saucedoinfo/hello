@@ -101,7 +101,7 @@ font-family: 'Lato', sans-serif;
 
 /*-- Top Header Menu --*/
 .primary-nav {
-	height: 80px;
+	height: 60px;
 }
 .navbar-brand img {
 	max-width: 120px;
@@ -393,7 +393,7 @@ font-family: 'Lato', sans-serif;
 		max-width: 90px
 	}
 	.hero {
-		padding-top: 80px;
+		padding-top: 60px;
 	}
 	.team-member .card-title {
 		font-size: .925rem !important;
@@ -422,7 +422,7 @@ font-family: 'Lato', sans-serif;
 
 @media (max-width: 575.98px) {
 	.hero {
-		padding-top: 80px;
+		padding-top: 60px;
 	}
 	.section {
 		padding: 50px 0;
