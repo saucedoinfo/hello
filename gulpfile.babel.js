@@ -54,7 +54,7 @@ gulp.task("html-min", () => {
 				removeComments: true,
 			})
 		)
-		.pipe(gulp.dest("./public"));
+		.pipe(gulp.dest("./docs"));
 });
 
 gulp.task("styles", () => {
@@ -63,7 +63,7 @@ gulp.task("styles", () => {
 		.pipe(plumber())
 		.pipe(concat("styles-min.css"))
 		.pipe(postcss(cssPlugins))
-		.pipe(gulp.dest("./public/assets/css"))
+		.pipe(gulp.dest("./docs/assets/css"))
 		.pipe(stream());
 });
 
@@ -74,7 +74,7 @@ gulp.task("babel", () => {
 		.pipe(concat("scripts-min.js"))
 		.pipe(babel())
 		.pipe(terser())
-		.pipe(gulp.dest("./public/assets/js"));
+		.pipe(gulp.dest("./docs/assets/js"));
 });
 
 gulp.task("views", () => {
@@ -91,7 +91,7 @@ gulp.task("views", () => {
 				type: "timestamp",
 			})
 		)
-		.pipe(gulp.dest("./public"));
+		.pipe(gulp.dest("./docs"));
 });
 
 gulp.task("sass", () => {
@@ -105,20 +105,20 @@ gulp.task("sass", () => {
 		)
 		.pipe(concat("styles-min.css"))
 		.pipe(postcss(cssPlugins))
-		.pipe(gulp.dest("./public/assets/css"))
+		.pipe(gulp.dest("./docs/assets/css"))
 		.pipe(stream());
 });
 
 gulp.task("clean", () => {
 	return gulp
-		.src("./public/assets/css/styles-min.css")
+		.src("./docs/assets/css/styles-min.css")
 		.pipe(plumber())
 		.pipe(
 			clean({
-				content: ["./public/*.html"],
+				content: ["./docs/*.html"],
 			})
 		)
-		.pipe(gulp.dest("./public/assets/css"));
+		.pipe(gulp.dest("./docs/assets/css"));
 });
 
 gulp.task("imgmin", () => {
@@ -137,7 +137,7 @@ gulp.task("imgmin", () => {
 				],
 			})
 		)
-		.pipe(gulp.dest("./public/assets/images"));
+		.pipe(gulp.dest("./docs/assets/images"));
 });
 
 gulp.task("typescript", () => {
@@ -149,14 +149,14 @@ gulp.task("typescript", () => {
 				outFile: "using-ts.js",
 			})
 		)
-		.pipe(gulp.dest("public/js"));
+		.pipe(gulp.dest("docs/js"));
 });
 
 
 
 gulp.task("default", () => {
 	server({
-		server: "./public",
+		server: "./docs",
 	});
 	gulp.watch("./src/*.html", gulp.series("html-min")).on("change", reload);
 	gulp.watch('./src/css/*.css', gulp.series("styles")).on('change', reload);
