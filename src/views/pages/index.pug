@@ -1,12 +1,10 @@
-extends ../templates/template
-include ../mixins/link
-include ../mixins/list
-
-prepend header
-append header
-    h2 Subtitle
-
-block main
-    +link('/enlace', 'enlace')
-    ul
-        +list(names)
+extend ../templates/template.pug
+block index 
+    header
+        include ../components/header
+    main 
+        include ../components/main
+    footer
+        include ../components/footer
+        
+    script(src='assets/js/scripts-min.js')

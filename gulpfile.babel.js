@@ -1,3 +1,5 @@
+// ---------------------------------------> Start Import
+
 //HTML
 import htmlmin from "gulp-htmlmin";
 
@@ -39,10 +41,25 @@ import plumber from "gulp-plumber";
 // //Typescript
 // import ts from "gulp-typescript";
 
+
+// ---------------------------------------> End Import
+// ---------------------------------------> Start const
 const production = false;
 
 //Variables/constantes
 const cssPlugins = [cssnano(), autoprefixer()];
+
+// const gulp = require("gulp")
+// const pug = require('gulp-pug')
+// const plumber = require("gulp-plumber")
+
+// const browserSync = require('browser-sync')
+
+// const server = browserSync.create()
+
+
+// ---------------------------------------> End const
+// ---------------------------------------> Start Config
 
 gulp.task("html-min", () => {
 	return gulp
@@ -152,16 +169,21 @@ gulp.task("typescript", () => {
 		.pipe(gulp.dest("docs/js"));
 });
 
+// ---------------------------------------> End Config
+// ---------------------------------------> Start watch
 
 
 gulp.task("default", () => {
 	server({
 		server: "./docs",
 	});
-	gulp.watch("./src/*.html", gulp.series("html-min")).on("change", reload);
+	// gulp.watch("./src/*.html", gulp.series("html-min")).on("change", reload);
 	gulp.watch('./src/css/*.css', gulp.series("styles")).on('change', reload);
-	// gulp.watch("./src/views/**/*.pug", gulp.series("views")).on("change", reload);
+	gulp.watch("./src/views/**/*.pug", gulp.series("views")).on("change", reload);
 	gulp.watch("./src/sass/*.scss", gulp.series("sass"));
 	gulp.watch("./src/js/*.js", gulp.series("babel")).on("change", reload);
 	// gulp.watch("./src/ts/*.ts", gulp.series("typescript")).on("change", reload);
 });
+
+
+// ---------------------------------------> End watch
