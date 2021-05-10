@@ -1,14 +1,29 @@
 // Tool https://formspree.io/
 
-form#form.text-center.ps-3.form(action="https://formspree.io/f/xoqyjgrk"  method="POST" )
+//- form#form.text-center.ps-3.form(action="https://formspree.io/f/xoqyjgrk"  method="POST" )
+//-   .my-2
+//-     input#name.form-control.col-12.mb-4(name='name' required='' type='text' placeholder='Your Full Name')
+//-   .my-2
+//-     input#email.form-control.col-12.mb-4(name='email'  type='email' placeholder='Email address')
+//-   .my-2
+//-     textarea#message.form-control.col-12.mb-4(name='message' rows='9' placeholder='Message')
+//-   .my-2.d-grid.gap-2
+//-     button.btn.btn-warning(type='submit') Send
+
+
+// Tool https://web3forms.com/
+form#form.text-center.ps-3.form(method='POST')
   .my-2
-    input#name.form-control.col-12.mb-4(name='name' required='' type='text' placeholder='Your Full Name')
+    input(type='hidden' name='apikey' value='becef963-566a-4d75-a189-433ec16347df')
+    input(type='hidden' name='subject' value='New Submission from Web3Forms')
+    input(type='checkbox' name='botcheck' id='' style='display: none;')
+  // Custom Form Data
   .my-2
-    input#email.form-control.col-12.mb-4(name='email'  type='email' placeholder='Email address')
+    input.form-control.col-12.mb-4(name='name' required='' type='text' placeholder='Your Full Name')
   .my-2
-    textarea#message.form-control.col-12.mb-4(name='message' rows='9' placeholder='Message')
+    input.form-control.col-12.mb-4(name='email'  type='email' placeholder='Email address')
+  .my-2
+    textarea.form-control.col-12.mb-4(name='message' rows='9' placeholder='Message')
   .my-2.d-grid.gap-2
     button.btn.btn-warning(type='submit') Send
-
-
-
+    #result

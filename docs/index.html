@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&amp;display=swap" rel="stylesheet">
-    <link href="assets/css/styles-min.css?t=1620614486813" rel="stylesheet">
+    <link href="assets/css/styles-min.css?t=1620653500228" rel="stylesheet">
   </head>
   <body data-bs-spy="scroll" data-target="#navbar" data-offset="300px">
     <header>
@@ -164,18 +164,26 @@
             </div>
             <div class="col-12 col-md-6">
               <!-- Tool https://formspree.io/-->
-              <form class="text-center ps-3 form" id="form" action="https://formspree.io/f/xoqyjgrk" method="POST">
+              <!-- Tool https://web3forms.com/-->
+              <form class="text-center ps-3 form" id="form" method="POST">
                 <div class="my-2">
-                  <input class="form-control col-12 mb-4" id="name" name="name" required="" type="text" placeholder="Your Full Name">
+                  <input type="hidden" name="apikey" value="becef963-566a-4d75-a189-433ec16347df">
+                  <input type="hidden" name="subject" value="New Submission from Web3Forms">
+                  <input type="checkbox" name="botcheck" id="" style="display: none;">
+                </div>
+                <!-- Custom Form Data-->
+                <div class="my-2">
+                  <input class="form-control col-12 mb-4" name="name" required="" type="text" placeholder="Your Full Name">
                 </div>
                 <div class="my-2">
-                  <input class="form-control col-12 mb-4" id="email" name="email" type="email" placeholder="Email address">
+                  <input class="form-control col-12 mb-4" name="email" type="email" placeholder="Email address">
                 </div>
                 <div class="my-2">
-                  <textarea class="form-control col-12 mb-4" id="message" name="message" rows="9" placeholder="Message"></textarea>
+                  <textarea class="form-control col-12 mb-4" name="message" rows="9" placeholder="Message"></textarea>
                 </div>
                 <div class="my-2 d-grid gap-2">
                   <button class="btn btn-warning" type="submit">Send</button>
+                  <div id="result"></div>
                 </div>
               </form>
             </div>
@@ -208,6 +216,6 @@
         </div>
       </section>
     </footer>
-    <script src="assets/js/scripts-min.js?t=1620614486813"></script>
+    <script src="assets/js/scripts-min.js?t=1620653500228"></script>
   </body>
 </html>
