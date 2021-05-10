@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&amp;display=swap" rel="stylesheet">
-    <link href="assets/css/styles-min.css?t=1620603515606" rel="stylesheet">
+    <link href="assets/css/styles-min.css?t=1620614486813" rel="stylesheet">
   </head>
   <body data-bs-spy="scroll" data-target="#navbar" data-offset="300px">
     <header>
@@ -51,7 +51,7 @@
       </section>
     </header>
     <main> 
-      <section class="hero bg-light vh-100 d-flex align-items-center" id="hero">
+      <section class="hero bg-light min-vh-100 d-flex align-items-center" id="hero">
         <div class="container">
           <div class="row">
             <div class="col-md-12 col-lg-5 offset-lg-1 order-1 order-lg-1">
@@ -59,9 +59,10 @@
             </div>
             <div class="col-md-12 col-lg-6 order-2 order-lg-2 mt-0 mt-lg-0 py-4 pt-lg-0">
               <div class="hero-content">
-                <h2 class="text-dark fw-bold inline-block position-relative">&#x1F44B;Hi!</h2>
+                <h2 class="text-muted fw-bold inline-block position-relative">&#x1F44B;Hi!</h2>
                 <h1 class="hero-title text-dark my-4">I&apos;m Fernando Saucedo.</h1>
-                <p class="d-none d-sm-none d-md-block">Frontend Developer. &#x1F680;</p>
+                <p class="d-none d-sm-none d-md-block"></p>
+                <h3 class="text-muted fw-bold inline-block position-relative">Frontend Developer. &#x1F680;</h3>
                 <ul class="fa-2x my-4 text-dark ps-0 text-decoration-none"><a class="text-decoration-none text-dark" href="https://twitter.com/Saucedoinfo" target="_blank"><i class="me-2 fab fa-twitter"></i></a><a class="text-decoration-none text-dark" href="https://github.com/saucedoinfo" target="_blank"><i class="me-2 ms-2 fab fa-github"></i></a><a class="text-decoration-none text-dark" href="https://www.facebook.com/saucedo.info" target="_blank"><i class="me-2 ms-2 fab fa-facebook"></i></a><a class="text-decoration-none text-dark" href="https://www.instagram.com/saucedo.info/" target="_blank"><i class="me-2 ms-2 fab fa-instagram"></i></a><a class="text-decoration-none text-dark" href="https://dribbble.com/saucedoinfo" target="_blank"><i class="ms-2 fab fa-dribbble"></i></a></ul>
                 <div><a class="btn btn-warning shadow-sm fw-bold me-2" href="#work">Portfolio</a><a class="btn btn-outline-dark fw-bold ms-2" href="#contact">Say hi!</a></div>
               </div>
@@ -69,13 +70,13 @@
           </div>
         </div>
       </section>
-      <section class="portfolio bg-white vh-100 section" id="work">
+      <section class="portfolio bg-white min-vh-100 section bg-dark" id="work">
         <div class="container-fluid pt-5">
           <div class="row">
             <div class="col">
-              <div class="section-head text-center mx-auto narrow"><span class="pre-title small position-relative fw-bold text-dark text-uppercase">Work</span>
-                <h2 class="section-title text-dark mt-3">Portfolio</h2>
-                <p class="section-subtitle mt-3 mb-0">Valuable content for companies and entrepreneurs. Modern design and development.</p>
+              <div class="section-head text-center mx-auto narrow"><span class="pre-title small position-relative fw-bold text-dark text-uppercase text-muted">Work</span>
+                <h2 class="section-title text-white mt-3">Portfolio</h2>
+                <p class="section-subtitle mt-3 mb-0 text-muted">Valuable content for companies and entrepreneurs. Modern design and development.</p>
               </div>
             </div>
           </div>
@@ -119,9 +120,9 @@
           </div>
         </div>
       </section>
-      <section class="services section section-bg" id="services">
-        <div class="container py-5">
-          <div class="row">
+      <section class="services section section-bg min-vh-100 d-flex justify-content-center align-items-center" id="services">
+        <div class="container">
+          <div class="row mb-5">
             <div class="col">
               <div class="section-head text-center mx-auto narrow"><span class="pre-title small position-relative fw-bold text-dark text-uppercase">Services</span>
                 <h2 class="section-title text-dark mt-3">What I Do</h2>
@@ -145,10 +146,14 @@
           </div>
         </div>
       </section>
-      <section class="section bg-dark vh-100 d-flex justify-content align-items-center" id="contact">
-        <div class="container py-5">
-          <div class="row text-center pb-5">
-            <h3 class="cta-title text-white">Get in Touch with me</h3>
+      <section class="section bg-dark min-vh-100 d-flex justify-content-center align-items-center" id="contact">
+        <div class="container">
+          <div class="row text-center mb-5">
+            <div class="col">
+              <div class="section-head text-center mx-auto narrow"><span class="pre-title small position-relative fw-bold text-dark text-uppercase text-muted">Contact</span>
+                <h2 class="section-title text-white mt-3">Get in Touch with me</h2>
+              </div>
+            </div>
           </div>
           <div class="row">
             <div class="col-12 col-md-6">
@@ -158,20 +163,21 @@
               </div>
             </div>
             <div class="col-12 col-md-6">
-              <div class="text-center ps-3">
+              <!-- Tool https://formspree.io/-->
+              <form class="text-center ps-3 form" id="form" action="https://formspree.io/f/xoqyjgrk" method="POST">
                 <div class="my-2">
-                  <input class="form-control col-12 mb-4" id="exampleFormControlInput1" type="text" placeholder="Your Full Name">
+                  <input class="form-control col-12 mb-4" id="name" name="name" required="" type="text" placeholder="Your Full Name">
                 </div>
                 <div class="my-2">
-                  <input class="form-control col-12 mb-4" id="exampleFormControlInput2" type="email" placeholder="Email address">
+                  <input class="form-control col-12 mb-4" id="email" name="email" type="email" placeholder="Email address">
                 </div>
                 <div class="my-2">
-                  <textarea class="form-control col-12 mb-4" id="exampleFormControlTextarea1" rows="9" placeholder="Message"></textarea>
+                  <textarea class="form-control col-12 mb-4" id="message" name="message" rows="9" placeholder="Message"></textarea>
                 </div>
                 <div class="my-2 d-grid gap-2">
-                  <button class="btn btn-outline-warning" type="submit">Send</button>
+                  <button class="btn btn-warning" type="submit">Send</button>
                 </div>
-              </div>
+              </form>
             </div>
           </div>
         </div>
@@ -190,18 +196,18 @@
           <div class="row footer-credits text-center py-3">
             <div class="col-12 col-md-12">
               <div class="footer-copy float-md-none float-lg-none">
-                <p class="mb-0 small">&copy; 2021<a class="text-decoration-none" href="https://twitter.com/Saucedoinfo"> Fernando Saucedo</a>.
+                <p class="mb-0 small">&copy; 2021<a class="text-decoration-none" href="https://twitter.com/Saucedoinfo" target="_blank"> Fernando Saucedo</a>.
                   &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;All Rights Reserved
                 </p>
               </div>
             </div>
             <div class="col-12 col-md-12 text-center text-light mt-3 py-3">
-              <h3><a href="https://en.wikipedia.org/wiki/Carpe_diem">&#x1F4AA; Carpe diem</a></h3>
+              <h3><a href="https://en.wikipedia.org/wiki/Carpe_diem" target="_blank">&#x1F4AA; Carpe diem</a></h3>
             </div>
           </div>
         </div>
       </section>
     </footer>
-    <script src="assets/js/scripts-min.js?t=1620603515606"></script>
+    <script src="assets/js/scripts-min.js?t=1620614486813"></script>
   </body>
 </html>

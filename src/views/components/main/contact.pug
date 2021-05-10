@@ -1,7 +1,10 @@
-section#contact.section.bg-dark.vh-100.d-flex.justify-content.align-items-center
-  .container.py-5
-    .row.text-center.pb-5
-      h3.cta-title.text-white Get in Touch with me
+section#contact.section.bg-dark.min-vh-100.d-flex.justify-content-center.align-items-center
+  .container
+    .row.text-center.mb-5
+      .col
+        .section-head.text-center.mx-auto.narrow
+          span.pre-title.small.position-relative.fw-bold.text-dark.text-uppercase.text-muted Contact
+          h2.section-title.text-white.mt-3 Get in Touch with me
     .row
       .col-12.col-md-6
         .text-center.pe-3
@@ -19,13 +22,5 @@ section#contact.section.bg-dark.vh-100.d-flex.justify-content.align-items-center
             a.text-decoration-none.text-muted(href='https://dribbble.com/saucedoinfo' target='_blank')
               i.my-4.ms-2.fab.fa-dribbble
       .col-12.col-md-6
-        .text-center.ps-3
-          .my-2
-            input#exampleFormControlInput1.form-control.col-12.mb-4(type='text' placeholder='Your Full Name')
-          .my-2
-            input#exampleFormControlInput2.form-control.col-12.mb-4(type='email' placeholder='Email address')
-          .my-2
-            textarea#exampleFormControlTextarea1.form-control.col-12.mb-4(rows='9' placeholder='Message')
-          .my-2.d-grid.gap-2
-            button.btn.btn-outline-warning(type='submit') Send
-  
+        include form.pug
+          
