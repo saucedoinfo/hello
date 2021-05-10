@@ -1,12 +1,16 @@
-section#contact.section.bg-dark
-  .container.py-5
+section#contact.section.bg-dark.min-vh-100.d-flex.justify-content-center.align-items-center
+  .container
+    .row.text-center.mb-5
+      .col
+        .section-head.text-center.mx-auto.narrow
+          span.pre-title.small.position-relative.fw-bold.text-dark.text-uppercase.text-muted Contact
+          h2.section-title.text-white.mt-3 Get in Touch with me
     .row
-      .col-8.offset-2
-        .text-center
-          h3.cta-title.text-white Get in Touch with me
+      .col-12.col-md-6
+        .text-center.pe-3
           p.cta-text.text-muted.mt-3.text-decoration-none
             | &quot;If you are not on the Internet, you are not visible&quot;. Different people and companies bet on the creation of profiles and web pages with the intention of making their personal brand visible. I am a web designer and developer. If you want to impose yourself in the market contact me through the different social networks.
-          ul.fa-2x.my-4.text-light.ps-0.text-decoration-none.mt-4.my-4
+          ul.fa-2x.text-light.ps-0.text-decoration-none
             a.text-decoration-none.text-muted(href='https://twitter.com/Saucedoinfo' target='_blank')
               i.my-4.me-2.ms-2.fab.fa-twitter
             a.text-decoration-none.text-muted(href='https://github.com/saucedoinfo' target='_blank')
@@ -17,3 +21,6 @@ section#contact.section.bg-dark
               i.my-4.me-2.ms-2.fab.fa-instagram
             a.text-decoration-none.text-muted(href='https://dribbble.com/saucedoinfo' target='_blank')
               i.my-4.ms-2.fab.fa-dribbble
+      .col-12.col-md-6
+        include form.pug
+          
