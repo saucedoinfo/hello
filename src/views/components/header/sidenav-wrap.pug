@@ -1,11 +1,13 @@
-section#sidenav-wrap
+section#sidenav-wrap.text-center
   span.sidenav-backdrop
   #sidenav.sidenav.font-lato.bg-dark.px-4
     a#close-sidenav.close-sidenav.text-decoration-none.text-white(href='#') &times;
     .sidenav-logo.mt-5.pt-5
       a(href='#')
         img.rounded-circle(src='assets/images/perfil.jpg')
-    .sidenav-menu.mt-5
+      p.text-light.mt-4.mb-0.pb-0 &#x1F44B;Hi!, I&apos;m Fer Saucedo.
+      p.text-muted Frontend Developer. &#x1F680;
+    .sidenav-menu.mt-2
       ul.nav.flex-column
         li.nav-item
           a.nav-link.px-0.active(aria-current='page' href='#hero') Home
@@ -17,7 +19,7 @@ section#sidenav-wrap
           a.nav-link.px-0(href='#contact') Contact
     hr.text-light
     .sidenav-social.mt-2
-      ul.list-unstyled
+      ul.list-unstyled.fa-lg
         a.text-decoration-none.text-light(href='https://twitter.com/Saucedoinfo' target='_blank')
           i.me-2.fab.fa-twitter
         a.text-decoration-none.text-light(href='https://github.com/saucedoinfo' target='_blank')

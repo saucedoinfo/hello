@@ -5,6 +5,8 @@
 	/* --sf-bg-warning: #ffc107; */
 	--sf-bg-dark: #020a13;
 	/* --sf-bg-dark: #0e1d2c; */
+	--sf-bg-muted: #8e98a2;
+	
 }
 
 /* color */
@@ -130,6 +132,7 @@ a.text-muted:hover {
 }
 .primary-nav .navbar-nav .nav-link {
 	/* color: #212529; */
+	color: var(--sf-bg-muted);
 	font-weight: 500;
 	padding-right: 1.2rem;
 	padding-left: 1.2rem;
